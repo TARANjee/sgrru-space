@@ -4,13 +4,14 @@ import BookList from '../Components/BookList'
 import { ref as sRef, getDownloadURL } from "firebase/storage";
 import { storage } from '../utils/firebase';
 import useDownloader from 'react-use-downloader';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import '../index.css'
 const Books = ({ data }) => {
-  console.log('booooook', data)
+  
   const itemList = []
-
   const { download } = useDownloader();
-
+  const auth = getAuth();
+  
   const downloadFiles = async (filename) => {
     const QPRef = sRef(storage,`books/${filename}`);
     await getDownloadURL(QPRef)
@@ -22,7 +23,17 @@ const Books = ({ data }) => {
   const listIndex = (i, j) => {
     console.log(i, j)
     if (data[i].data[j].file) {
-      downloadFiles(data[i].data[j].file)
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+
+          downloadFiles(data[i].data[j].file)
+
+        } else {
+            alert("Please signin ")
+
+        }
+    });
+     
     }
 
   }
