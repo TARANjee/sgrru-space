@@ -1,0 +1,92 @@
+nav,
+.Items {
+  display: flex;
+  
+  align-items: center;
+  padding:10px
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.menuList{
+  
+  font-weight: bold;
+  padding:10px;
+
+  
+}
+.menuList:hover{
+  color: rgb(36, 35, 35);
+}
+li {
+  list-style-type: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #f4f4f5;
+  width:100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+
+}
+.marbot{
+  margin-bottom: 10px;
+}
+.flexRow{
+  display: 'flex';
+   align-items: 'center' 
+}
+.mgb {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.Logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Quintessential", cursive;
+    text-transform: capitalize;
+}
+.QPaper {
+  min-width: 150px;
+
+}
+
+.wd {
+  width: 100%;
+  margin: 10px;
+}
+.names {
+  display: flex;
+
+  width: 100%;
+}
+.form {
+  margin-bottom: 20px;
+}
+.text {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #161515c2;
+}
+.error {
+  color: red;
+}
+.success {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: 1px;
+  border-radius: 10px;
+}
+.none {
+  display: none;
+}
