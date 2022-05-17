@@ -131,6 +131,7 @@ console.log(data)
                 {/* Not Authenticated yet */}
                 <Modal activeModal={activeModal} open={activeModal === 'sign up' ? true : false} setActiveModal={setActiveModal} />
                 <Modal activeModal={activeModal} open={activeModal === 'sign in' ? true : false} setActiveModal={setActiveModal} />
+                <Modal activeModal={activeModal} open={activeModal === 'signin with email' ? true : false} setActiveModal={setActiveModal} />
 
                 
             </Container >

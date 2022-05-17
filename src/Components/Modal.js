@@ -229,23 +229,6 @@ const UploadModal = ({ activeModal, data, open, setActiveModal }) => {
                     <div >Already have an account? <Button style={{ textTransform: 'none' }} onClick={() => setActiveModal('sign in')}>Sign in</Button> </div>
                     <Modal open={activeModal === 'sign in' ? true : false} setActiveModal={setActiveModal} />
                 </Box>
-            ) : activeModal === 'sign in' ? (
-                <Box sx={style} >
-                    <h1 className='mgb'>Sign in</h1>
-
-                    <Button   variant="contained"  style={{textTransform: 'none',marginBottom:'5px',width:'100%'}}color="success"  startIcon={<GoogleIcon />}onClick={google}>Sign in with Google</Button>
-                    <Button   variant="contained"  style={{textTransform: 'none',marginBottom:'10px',width:'100%'}} startIcon={<FacebookIcon />}onClick={facebook}>Sign in with Facebook</Button>
-
-                    <div>Don&lsquo;t have an account? <Button style={{ textTransform: 'none' }} onClick={() => setActiveModal('sign up')}>Sign Up</Button> </div>
-                    <hr style={{width:'100%'}}></hr>
-                    <Button style={{ textTransform: 'none' }} onClick={() => setActiveModal('signin with email')}>Signin with Email</Button>
-
-                    <Modal open={activeModal === 'signup' ? true : false} setActiveModal={setActiveModal} />
-                
-                    <Modal open={activeModal === 'signin with email' ? true : false} setActiveModal={setActiveModal} />
-                
-
-                </Box>
             ) : activeModal === 'signin with email' ? (
                 <Box sx={style} >
                     <h1 className='mgb'>Sign in</h1>
@@ -262,6 +245,23 @@ const UploadModal = ({ activeModal, data, open, setActiveModal }) => {
                     <div>Don&lsquo;t have an account? <Button style={{ textTransform: 'none' }} onClick={() => setActiveModal('sign up')}>Sign Up</Button> </div>
 
                     <Modal open={activeModal === 'sign up' ? true : false} setActiveModal={setActiveModal} />
+                </Box>
+            ) : activeModal === 'sign in' ? (
+                <Box sx={style} >
+                    <h1 className='mgb'>Sign in</h1>
+
+                    <Button   variant="contained"  style={{textTransform: 'none',marginBottom:'5px',width:'100%'}}color="success"  startIcon={<GoogleIcon />}onClick={google}>Sign in with Google</Button>
+                    <Button   variant="contained"  style={{textTransform: 'none',marginBottom:'10px',width:'100%'}} startIcon={<FacebookIcon />}onClick={facebook}>Sign in with Facebook</Button>
+
+                    <div>Don&lsquo;t have an account? <Button style={{ textTransform: 'none' }} onClick={() => setActiveModal('sign up')}>Sign Up</Button> </div>
+                    <hr style={{width:'100%'}}></hr>
+                    <Button style={{ textTransform: 'none' }} onClick={() => setActiveModal('signin with email')}>Signin with Email</Button>
+
+                    <Modal open={activeModal === 'signup' ? true : false} setActiveModal={setActiveModal} />
+                
+                    <Modal open={activeModal === 'signin with email' ? true : false} setActiveModal={setActiveModal} />
+                
+
                 </Box>
             ) :
                 (<Box sx={style} >
